@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Areas - Desai Engineering</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <style>
+    [x-cloak] { display: none; }
+    body { margin: 0; font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+   <header class="shadow-md w-full bg-white transition-colors duration-300" x-data="{ open: false }">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        
+        <!-- Logo -->
+        <a href="/" class="flex-shrink-0" data-aos="flip-down" data-aos-duration="1000">
+          <!-- SVG LOGO -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
+            <g transform="translate(256,256)">
+              <circle r="160" fill="none" stroke="#EF6C00" stroke-width="40" stroke-dasharray="440 100" transform="rotate(-25)" />
+              <g transform="rotate(-25)">
+                <rect x="-60" y="-50" width="120" height="20" rx="4" fill="black" />
+                <rect x="-60" y="-10" width="100" height="20" rx="4" fill="black" />
+                <rect x="-60" y="30" width="80" height="20" rx="4" fill="black" />
+              </g>
+            </g>
+          </svg>
+
+          
+        </a>
+        
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="#" class="border-b-2 border-orange-600 text-orange-600 font-semibold">Home</a>
+          <a href="#" class="text-gray-700 hover:text-orange-600">About Us</a>
+          <a href="#" class="text-gray-700 hover:text-orange-600">Business Areas</a>
+          <a href="#" class="text-gray-700 hover:text-orange-600">Services</a>
+          <a href="#" class="text-gray-700 hover:text-orange-600">Infrastructure</a>
+          <a href="#" class="text-gray-700 hover:text-orange-600">Why Desai</a>
+          <a href="#" class="text-gray-700 hover:text-orange-600">Events</a>
+          <a href="#" class="text-gray-700 hover:text-orange-600">More</a>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="md:hidden">
+          <button @click="open = !open" class="text-gray-700 focus:outline-none">
+            <svg x-cloak x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg x-cloak x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Links -->
+    <div x-show="open"
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="opacity-0 -translate-y-4"
+      x-transition:enter-end="opacity-100 translate-y-0"
+      x-transition:leave="transition ease-in duration-200"
+      x-transition:leave-start="opacity-100 translate-y-0"
+      x-transition:leave-end="opacity-0 -translate-y-4"
+      class="md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
+      <a href="#" class="block text-orange-600 font-semibold">Home</a>
+      <a href="#" class="block text-gray-700">About Us</a>
+      <a href="#" class="block text-gray-700">Business Areas</a>
+      <a href="#" class="block text-gray-700">Services</a>
+      <a href="#" class="block text-gray-700">Infrastructure</a>
+      <a href="#" class="block text-gray-700">Why Desai</a>
+      <a href="#" class="block text-gray-700">Events</a>
+      <a href="#" class="block text-gray-700">More</a>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="bg-[#0c2752] text-white py-24 text-center" data-aos="fade-down">
+    <div class="max-w-5xl mx-auto px-4">
+      <h1 class="text-5xl font-bold mb-4">Our Business Areas</h1>
+      <p class="text-lg max-w-2xl mx-auto">Desai Engineering provides innovative, precision-focused engineering solutions across key industries.</p>
+    </div>
+  </section>
+
+  <!-- Business Areas Grid -->
+  <section class="py-20 bg-[#f9f9f9]">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+
+        <!-- Fabrication -->
+        <div class="text-center cursor-pointer bg-white shadow-lg p-6 rounded-xl hover:shadow-xl transition" data-aos="fade-up">
+          <img src="https://img.icons8.com/ios-filled/50/0c2752/automatic.png" alt="Fabrication" class="mx-auto mb-4 h-12">
+          <h3 class="text-xl font-bold text-[#0c2752] mb-2">Heavy Fabrication</h3>
+          <p class="text-gray-600 text-sm">High-precision fabrication services for structural, industrial, and mechanical components.</p>
+        </div>
+
+        <!-- Engineering Design -->
+        <div class="text-center cursor-pointer bg-white shadow-lg p-6 rounded-xl hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://img.icons8.com/ios-filled/50/0c2752/gear.png" alt="Engineering Design" class="mx-auto mb-4 h-12">
+          <h3 class="text-xl font-bold text-[#0c2752] mb-2">Engineering Design</h3>
+          <p class="text-gray-600 text-sm">Tailored CAD/CAM designs with stress analysis, structural simulations, and product optimization.</p>
+        </div>
+
+        <!-- Power & Energy -->
+        <div class="text-center cursor-pointer bg-white shadow-lg p-6 rounded-xl hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://img.icons8.com/ios-filled/50/0c2752/electrical.png" alt="Power & Energy" class="mx-auto mb-4 h-12">
+          <h3 class="text-xl font-bold text-[#0c2752] mb-2">Power & Energy</h3>
+          <p class="text-gray-600 text-sm">Solutions for power generation, renewable energy, and transmission infrastructure support.</p>
+        </div>
+
+        <!-- Oil & Gas -->
+        <div class="text-center cursor-pointer bg-white shadow-lg p-6 rounded-xl hover:shadow-xl transition" data-aos="fade-up">
+          <img src="https://img.icons8.com/ios-filled/50/0c2752/oil-industry.png" alt="Oil & Gas" class="mx-auto mb-4 h-12">
+          <h3 class="text-xl font-bold text-[#0c2752] mb-2">Oil & Gas</h3>
+          <p class="text-gray-600 text-sm">Custom assemblies and high-grade parts built to withstand harsh offshore & refinery environments.</p>
+        </div>
+
+        <!-- Defence & Aerospace -->
+        <div class="text-center cursor-pointer bg-white shadow-lg p-6 rounded-xl hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://img.icons8.com/ios-filled/50/0c2752/jet-fighter.png" alt="Defence & Aerospace" class="mx-auto mb-4 h-12">
+          <h3 class="text-xl font-bold text-[#0c2752] mb-2">Defence & Aerospace</h3>
+          <p class="text-gray-600 text-sm">Precision components for national defense, aircraft structures, and mission-critical applications.</p>
+        </div>
+
+        <!-- Infrastructure & Construction -->
+        <div class="text-center cursor-pointer bg-white shadow-lg p-6 rounded-xl hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://img.icons8.com/ios-filled/50/0c2752/construction.png" alt="Construction" class="mx-auto mb-4 h-12">
+          <h3 class="text-xl font-bold text-[#0c2752] mb-2">Infrastructure & Construction</h3>
+          <p class="text-gray-600 text-sm">Support systems, frameworks, and modular steel structures for large-scale civil projects.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-100" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-[#0c2752] mb-6">Our Capabilities</h2>
+    <p class="text-lg mb-10">From prototyping to mass production — we handle it all with advanced technology and decades of experience.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 bg-white rounded-xl shadow-lg">
+        <img src="https://img.icons8.com/ios-filled/50/0c2752/machine.png" class="mx-auto mb-4" />
+        <h3 class="font-semibold text-lg text-[#0c2752] mb-2">CNC & Laser Cutting</h3>
+        <p class="text-sm text-gray-600">High precision metal cutting using state-of-the-art laser and CNC machines.</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-lg">
+        <img src="https://img.icons8.com/ios-filled/50/0c2752/robot-2.png" class="mx-auto mb-4" />
+        <h3 class="font-semibold text-lg text-[#0c2752] mb-2">Automated Fabrication</h3>
+        <p class="text-sm text-gray-600">Automation for consistency, speed, and volume across custom metal products.</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-lg">
+        <img src="https://img.icons8.com/ios-filled/50/0c2752/checked-2--v1.png" class="mx-auto mb-4" />
+        <h3 class="font-semibold text-lg text-[#0c2752] mb-2">Quality & Compliance</h3>
+        <p class="text-sm text-gray-600">Every product undergoes rigorous checks to meet domestic and global standards.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-16 bg-white" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-[#0c2752] mb-6">Industries We Serve</h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/0c2752/car.png" class="mx-auto mb-3" />
+        <h4 class="text-[#0c2752] font-semibold">Automotive</h4>
+      </div>
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/0c2752/engineering.png" class="mx-auto mb-3" />
+        <h4 class="text-[#0c2752] font-semibold">Heavy Engineering</h4>
+      </div>
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/0c2752/wind-turbine.png" class="mx-auto mb-3" />
+        <h4 class="text-[#0c2752] font-semibold">Renewable Energy</h4>
+      </div>
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/0c2752/health-book.png" class="mx-auto mb-3" />
+        <h4 class="text-[#0c2752] font-semibold">Medical & Pharma</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-[#f9f9f9]" data-aos="fade-up">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-[#0c2752] mb-4">Located in the Heart of Industrial Pune</h2>
+    <p class="text-gray-700 text-lg mb-6">Desai Engineering operates from Bhosari MIDC — the manufacturing hub of Maharashtra.</p>
+   <div class="rounded-xl shadow-lg overflow-hidden">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.6838453702464!2d73.84385047510662!3d18.642305982495947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c722d78b34fb%3A0xf97821a38817de7f!2sBhosari%2C%20Pimpri-Chinchwad%2C%20Maharashtra%20411026!5e0!3m2!1sen!2sin!4v1690182560484!5m2!1sen!2sin"
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Call to Action -->
+  <section class="py-20 bg-[#0c2752] text-white text-center" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-4">Ready to partner with Desai Engineering?</h2>
+      <p class="text-lg mb-6">Let’s build the future together. Get in touch to discuss your project needs.</p>
+      <a href="/contact" class="inline-block bg-white text-[#0c2752] font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Desai Engineering</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <style>
+    [x-cloak] { display: none; }
+    body { margin: 0; font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+     <!-- Header -->
+  <header class="shadow-md w-full bg-white transition-colors duration-300" x-data="{ open: false }">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        
+        <!-- Logo -->
+        <a href="/" class="flex-shrink-0" data-aos="flip-down" data-aos-duration="1000">
+          <!-- SVG LOGO -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
+            <g transform="translate(256,256)">
+              <circle r="160" fill="none" stroke="#EF6C00" stroke-width="40" stroke-dasharray="440 100" transform="rotate(-25)" />
+              <g transform="rotate(-25)">
+                <rect x="-60" y="-50" width="120" height="20" rx="4" fill="black" />
+                <rect x="-60" y="-10" width="100" height="20" rx="4" fill="black" />
+                <rect x="-60" y="30" width="80" height="20" rx="4" fill="black" />
+              </g>
+            </g>
+          </svg>
+
+          
+        </a>
+        
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="#" class="border-b-2 border-orange-600 text-orange-600 font-semibold">Home</a>
+          <a href="#" class="text-gray-700 hover:text-orange-600">About Us</a>
+          <a href="#" class="text-gray-700 hover:text-orange-600">Business Areas</a>
+          <a href="#" class="text-gray-700 hover:text-orange-600">Services</a>
+          <a href="#" class="text-gray-700 hover:text-orange-600">Infrastructure</a>
+          <a href="#" class="text-gray-700 hover:text-orange-600">Why Desai</a>
+          <a href="#" class="text-gray-700 hover:text-orange-600">Events</a>
+          <a href="#" class="text-gray-700 hover:text-orange-600">More</a>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="md:hidden">
+          <button @click="open = !open" class="text-gray-700 focus:outline-none">
+            <svg x-cloak x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg x-cloak x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Links -->
+    <div x-show="open"
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="opacity-0 -translate-y-4"
+      x-transition:enter-end="opacity-100 translate-y-0"
+      x-transition:leave="transition ease-in duration-200"
+      x-transition:leave-start="opacity-100 translate-y-0"
+      x-transition:leave-end="opacity-0 -translate-y-4"
+      class="md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
+      <a href="#" class="block text-orange-600 font-semibold">Home</a>
+      <a href="#" class="block text-gray-700">About Us</a>
+      <a href="#" class="block text-gray-700">Business Areas</a>
+      <a href="#" class="block text-gray-700">Services</a>
+      <a href="#" class="block text-gray-700">Infrastructure</a>
+      <a href="#" class="block text-gray-700">Why Desai</a>
+      <a href="#" class="block text-gray-700">Events</a>
+      <a href="#" class="block text-gray-700">More</a>
+    </div>
+  </header>
+
+ 
+  <!-- Hero Section -->
+<section class="bg-[#0c2752]  text-white py-20">
+    <div class="max-w-5xl mx-auto px-4 text-center" data-aos="fade-up">
+      <h1 class="text-5xl font-bold mb-4">About Desai Engineering</h1>
+      <p class="text-lg max-w-2xl mx-auto">
+        Precision. Reliability. Innovation. These are the values that drive us.
+      </p>
+    </div>
+  </section>
+
+  <!-- Company Overview -->
+  <section class="py-20 bg-[#f8fafc]">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center" data-aos="fade-up">
+      <div>
+        <h2 class="text-3xl font-bold text-[#0c2752] mb-6">Who We Are</h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          Desai Engineering is a leading industrial fabrication and precision engineering company based in India. With over <strong>700+ employees</strong> and a strong global footprint, we take pride in delivering high-quality metal components to clients worldwide.
+        </p>
+        <p class="mt-4 text-gray-700 text-lg leading-relaxed">
+          Our operations span across <strong>4 state-of-the-art plants</strong> — 3 in Pune and 1 in Pithampur (near Indore) — with a total capacity to process more than <strong>60,000 metric tons of steel annually</strong>.
+        </p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1581090463382-7f1a17c4cb0e" alt="Industrial Plant" class="rounded-lg shadow-lg">
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center" data-aos="fade-up">
+      <img src="https://images.unsplash.com/photo-1581090700227-2fe7aaf4130d" alt="Innovation" class="rounded-lg shadow-lg">
+      <div>
+        <h2 class="text-3xl font-bold text-[#0c2752] mb-6">Our Mission & Vision</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          <strong>Mission:</strong> To deliver reliable, cost-effective, and innovative engineering solutions that exceed customer expectations.
+        </p>
+        <p class="mt-4 text-lg text-gray-700 leading-relaxed">
+          <strong>Vision:</strong> To become the most trusted engineering partner across industries worldwide by leveraging advanced manufacturing and a commitment to excellence.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="bg-[#0c2752] py-16 text-white text-center" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-6 grid sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <div>
+        <h3 class="text-4xl font-bold">700+</h3>
+        <p class="mt-2">Employees</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold">4</h3>
+        <p class="mt-2">Manufacturing Plants</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold">60K+ MT</h3>
+        <p class="mt-2">Steel Processed / Year</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold">30%+</h3>
+        <p class="mt-2">Exports</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership -->
+  <section class="py-20 bg-[#f8fafc]" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-[#0c2752] mb-8">Leadership & Values</h2>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        At Desai Engineering, we believe in growing through partnerships, driven by integrity and powered by people. Our leadership fosters a culture of continuous improvement and global quality standards.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- Awards & Certifications -->
+<section class="py-20 bg-white" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-[#0c2752] mb-10">Awards & Certifications</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/0c2752/checked--v1.png" alt="ISO Certified" class="mx-auto h-12 mb-4">
+        <p class="text-gray-700">ISO 9001:2015 Certified</p>
+      </div>
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/0c2752/trophy.png" alt="Excellence Award" class="mx-auto h-12 mb-4">
+        <p class="text-gray-700">Excellence in Export Award</p>
+      </div>
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/0c2752/security-checked--v1.png" alt="Safety Award" class="mx-auto h-12 mb-4">
+        <p class="text-gray-700">National Safety Excellence</p>
+      </div>
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/0c2752/leaf.png" alt="Green Manufacturing" class="mx-auto h-12 mb-4">
+        <p class="text-gray-700">Green Manufacturing Recognition</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Sustainability Section -->
+<section class="py-20 bg-[#f1f5f9]" data-aos="fade-up">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-[#0c2752] mb-6">Sustainability & Social Responsibility</h2>
+    <p class="text-lg text-gray-700 leading-relaxed">
+      At Desai Engineering, sustainability is at the core of everything we do. From reducing carbon emissions to promoting ethical manufacturing and giving back to our communities.
+    </p>
+    <p class="mt-4 text-lg text-gray-700 leading-relaxed">
+      Our facilities follow eco-friendly practices like solar integration, waste management, and energy-efficient production. We also support local education, health and vocational training.
+    </p>
+  </div>
+</section>
+
+
+<!-- Client Logos -->
+<section class="py-20 bg-white" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-[#0c2752] mb-10">Trusted by Industry Leaders</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center">
+      <img src="https://img.icons8.com/ios-filled/50/0c2752/handshake--v1.png" alt="Client 1" class="h-12 mx-auto grayscale hover:grayscale-0 transition" />
+      <img src="https://img.icons8.com/ios-filled/50/0c2752/factory.png" alt="Client 2" class="h-12 mx-auto grayscale hover:grayscale-0 transition" />
+      <img src="https://img.icons8.com/ios-filled/50/0c2752/partnership.png" alt="Client 3" class="h-12 mx-auto grayscale hover:grayscale-0 transition" />
+      <img src="https://img.icons8.com/ios-filled/50/0c2752/collaboration.png" alt="Client 4" class="h-12 mx-auto grayscale hover:grayscale-0 transition" />
+    </div>
+  </div>
+</section>
+
+
+<!-- Testimonials -->
+<section class="py-20 bg-[#e2e8f0]" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-[#0c2752] mb-10">What Our Clients Say</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white shadow-xl rounded-lg p-6">
+        <p class="text-gray-700 italic">“Desai Engineering is our go-to partner for all custom precision fabrication needs.”</p>
+        <p class="mt-4 font-semibold text-[#0c2752]">– Operations Manager, SteelForge Inc.</p>
+      </div>
+      <div class="bg-white shadow-xl rounded-lg p-6">
+        <p class="text-gray-700 italic">“Highly reliable and always delivering ahead of time. Impressive technical know-how.”</p>
+        <p class="mt-4 font-semibold text-[#0c2752]">– Plant Head, MechaTech Ltd.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Call to Action -->
+  <section class="bg-[#0c2752] text-white py-12 text-center" data-aos="zoom-in">
+    <h2 class="text-3xl font-bold mb-4">Want to collaborate with us?</h2>
+    <p class="mb-6 text-lg">Get in touch for custom fabrication, OEM solutions, and more.</p>
+    <a href="/contact" class="bg-white text-[#0c2752] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Contact Us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0c2752] text-white py-6 text-center text-sm">
+    <p>&copy; 2025 Desai Engineering. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>

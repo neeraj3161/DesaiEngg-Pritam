@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Desai Engineering</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <style>
+    [x-cloak] { display: none; }
+    body { margin: 0; font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+     <!-- Header -->
+  <header class="shadow-md w-full bg-white transition-colors duration-300" x-data="{ open: false }">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        
+        <!-- Logo -->
+        <a href="/" class="flex-shrink-0" data-aos="flip-down" data-aos-duration="1000">
+          <!-- SVG LOGO -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
+            <g transform="translate(256,256)">
+              <circle r="160" fill="none" stroke="#EF6C00" stroke-width="40" stroke-dasharray="440 100" transform="rotate(-25)" />
+              <g transform="rotate(-25)">
+                <rect x="-60" y="-50" width="120" height="20" rx="4" fill="black" />
+                <rect x="-60" y="-10" width="100" height="20" rx="4" fill="black" />
+                <rect x="-60" y="30" width="80" height="20" rx="4" fill="black" />
+              </g>
+            </g>
+          </svg>
+
+          
+        </a>
+        
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="#" class=" text-gray-700 hover:text-orange-600">Home</a>
+          <a href="#" class=" hover:text-orange-600">About Us</a>
+          <a href="#" class="text-gray-700 hover:text-orange-600">Business Areas</a>
+          <a href="#" class="text-gray-700 border-orange-600 font-semibold border-b-2  hover:text-orange-600">Services</a>
+          <a href="#" class="text-gray-700 hover:text-orange-600">Infrastructure</a>
+          <a href="#" class="text-gray-700 hover:text-orange-600">Why Desai</a>
+          <a href="#" class="text-gray-700 hover:text-orange-600">Events</a>
+          <a href="#" class="text-gray-700 hover:text-orange-600">More</a>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="md:hidden">
+          <button @click="open = !open" class="text-gray-700 focus:outline-none">
+            <svg x-cloak x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg x-cloak x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Links -->
+    <div x-show="open"
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="opacity-0 -translate-y-4"
+      x-transition:enter-end="opacity-100 translate-y-0"
+      x-transition:leave="transition ease-in duration-200"
+      x-transition:leave-start="opacity-100 translate-y-0"
+      x-transition:leave-end="opacity-0 -translate-y-4"
+      class="md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
+      <a href="#" class="block text-orange-600 font-semibold">Home</a>
+      <a href="#" class="block text-gray-700">About Us</a>
+      <a href="#" class="block text-gray-700">Business Areas</a>
+      <a href="#" class="block text-gray-700">Services</a>
+      <a href="#" class="block text-gray-700">Infrastructure</a>
+      <a href="#" class="block text-gray-700">Why Desai</a>
+      <a href="#" class="block text-gray-700">Events</a>
+      <a href="#" class="block text-gray-700">More</a>
+    </div>
+  </header>
+
+
+
+  <!-- Services Section -->
+<section class="py-20 bg-['#0c2752']" id="services">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-4xl font-bold text-[#0c2752] mb-12" data-aos="fade-up">Our Services</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Service Card -->
+      <div class="relative group bg-[#f3f6fb] rounded-2xl overflow-hidden shadow-lg p-8 transition-all duration-500 hover:bg-white" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex flex-col items-center">
+          <img src="https://img.icons8.com/ios-filled/50/0c2752/engineering.png" class="mb-4" />
+          <h3 class="text-xl font-semibold text-[#0c2752] transition-all duration-300 group-hover:-translate-y-2">
+            Precision Fabrication
+          </h3>
+          <p class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 mt-4 text-gray-600 text-sm">
+            We offer high-precision sheet metal fabrication using advanced machinery, ensuring accurate and consistent parts.
+          </p>
+        </div>
+      </div>
+
+      <!-- Service Card -->
+      <div class="relative group bg-[#f3f6fb] rounded-2xl overflow-hidden shadow-lg p-8 transition-all duration-500 hover:bg-white" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex flex-col items-center">
+          <img src="https://img.icons8.com/ios-filled/50/0c2752/welding.png" class="mb-4" />
+          <h3 class="text-xl font-semibold text-[#0c2752] transition-all duration-300 group-hover:-translate-y-2">
+            Welding & Assembly
+          </h3>
+          <p class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 mt-4 text-gray-600 text-sm">
+            MIG, TIG, Spot & Robotic welding – expertly done by skilled technicians following international quality standards.
+          </p>
+        </div>
+      </div>
+
+      <!-- Service Card -->
+      <div class="relative group bg-[#f3f6fb] rounded-2xl overflow-hidden shadow-lg p-8 transition-all duration-500 hover:bg-white" data-aos="fade-up" data-aos-delay="300">
+        <div class="flex flex-col items-center">
+          <img src="https://img.icons8.com/ios-filled/50/0c2752/inspection.png" class="mb-4" />
+          <h3 class="text-xl font-semibold text-[#0c2752] transition-all duration-300 group-hover:-translate-y-2">
+            Quality Inspection
+          </h3>
+          <p class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 mt-4 text-gray-600 text-sm">
+            Our in-house lab uses 3D CMM, gauges & advanced tools for ensuring every component meets critical tolerances.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  </body>

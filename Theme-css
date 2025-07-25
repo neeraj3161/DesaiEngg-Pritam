@@ -1,0 +1,62 @@
+/* theme.css */
+
+:root {
+  --clr-primary: #EF6C00;
+  --clr-dark: #111111;
+  --clr-light: #ffffff;
+  --clr-gray: #4B5563;
+
+  /* Font */
+  --font-family: 'Poppins', sans-serif;
+}
+
+/* Dark Theme Support */
+[data-theme="dark"] {
+  --clr-light: #111111;
+  --clr-dark: #ffffff;
+  --clr-gray: #9CA3AF;
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+}
+
+/* Utilities */
+body {
+  font-family: var(--font-family);
+  color: var(--clr-dark);
+  background-color: var(--clr-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.text-primary {
+  color: var(--clr-primary);
+}
+
+.bg-primary {
+  background-color: var(--clr-primary);
+}
+
+.border-primary {
+  border-color: var(--clr-primary);
+}
+
+.hover\:text-primary:hover {
+  color: var(--clr-primary);
+}
+
+.hover\:bg-primary:hover {
+  background-color: var(--clr-primary);
+}
+
+/* Example button style */
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: var(--clr-primary);
+  color: white;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #d45500; /* slightly darker orange */
+}
