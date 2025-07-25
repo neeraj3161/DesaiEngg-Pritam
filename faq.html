@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faq's - Desai Engineering</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <style>
+      [x-cloak] { display: none; }
+      body { margin: 0; font-family: 'Inter', sans-serif; }
+    </style>
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header class="shadow-md w-full bg-white sticky top-0 z-30" x-data="{ open: false }">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a href="/" class="flex items-center space-x-4" data-aos="flip-down" data-aos-duration="1000">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
+              <g transform="translate(256,256)">
+                <circle r="160" fill="none" stroke="#EF6C00" stroke-width="40"
+                  stroke-dasharray="440 100" transform="rotate(-25)" />
+                <g transform="rotate(-25)">
+                  <rect x="-60" y="-50" width="120" height="20" rx="4" fill="black" />
+                  <rect x="-60" y="-10" width="100" height="20" rx="4" fill="black" />
+                  <rect x="-60" y="30" width="80" height="20" rx="4" fill="black" />
+                </g>
+              </g>
+            </svg>
+            <h2 class="font-serif text-orange-600">Desai Engineering</h2>
+          </a>
+          <nav class="hidden md:flex items-center space-x-6">
+            <a href="/" class="text-gray-700 hover:text-orange-600">Home</a>
+            <a href="/aboutUs.html" class="text-gray-700 hover:text-orange-600">About Us</a>
+            <a href="./business-areas.html" class="text-gray-700 hover:text-orange-600">Business Areas</a>
+            <a href="./services.html" class="text-gray-700 hover:text-orange-600">Services</a>
+            <a href="/faq.html" class="border-b-2 border-orange-600 text-orange-600 font-semibold">FAQ's</a>
+            <a href="tel:+918888011628" class="text-gray-700 hover:text-orange-600">Contact</a>
+            <a href="https://www.google.com/maps/dir/18.6679296,73.7378304/Natraj+Enterprises-Caster+Wheel+%2F+Trolley+Wheel+%2F+Forklift+%2F+Hydraulic+Stacker+Manufacturer+in+Bhosari%2FChakan%2FPune,+S+Block,+MIDC,+Bhosari,+Pimpri-Chinchwad,+Maharashtra/@18.6519258,73.7680673,8618m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bc2b80c06fae0f1:0x30f6ddc0f3ce1e52!2m2!1d73.8364308!2d18.6364352?entry=ttu&g_ep=EgoyMDI1MDcyMi4wIKXMDSoASAFQAw%3D%3D" class="text-gray-700 hover:text-orange-600">Locate us</a>
+          </nav>
+          <div class="md:hidden">
+            <button @click="open = !open" class="text-gray-700 focus:outline-none">
+              <svg x-cloak x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <svg x-cloak x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div x-show="open" x-transition class="md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
+        <a href="/" class="block text-gray-700">Home</a>
+        <a href="aboutUs.html" class="block text-gray-700">About Us</a>
+        <a href="/business-areas.html" class="block text-gray-700">Business Areas</a>
+        <a href="/services.html" class="block text-gray-700">Services</a>
+        <a href="/faq.html" class="block text-orange-600 font-semibold">FAQ's</a>
+       <a href="tel:+918888011628" class="text-gray-700 block hover:text-orange-600">Contact</a>
+         <a href="https://www.google.com/maps/dir/18.6679296,73.7378304/Natraj+Enterprises-Caster+Wheel+%2F+Trolley+Wheel+%2F+Forklift+%2F+Hydraulic+Stacker+Manufacturer+in+Bhosari%2FChakan%2FPune,+S+Block,+MIDC,+Bhosari,+Pimpri-Chinchwad,+Maharashtra/@18.6519258,73.7680673,8618m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bc2b80c06fae0f1:0x30f6ddc0f3ce1e52!2m2!1d73.8364308!2d18.6364352?entry=ttu&g_ep=EgoyMDI1MDcyMi4wIKXMDSoASAFQAw%3D%3D" class="text-gray-700 block hover:text-orange-600">Locate us</a>
+      </div>
+    </header>
+
+    <!-- FAQ Section -->
+     <div  class="bg-[#0c2752]">
+              <h2 class="text-2xl font-bold text-center text-white p-10">Frequently Asked Questions</h2>
+</div>
+    <main class="max-w-4xl mx-auto mt-1 p-1 bg-white rounded" x-data="{ selected: null }">
+
+  <div class="max-w-5xl mx-auto px-2">
+<section class="py-2 bg-white" id="faq">
+   <div x-data="{ selected: null, faqs: [
+  { q: 'What services does Desai Engineering offer?', a: 'We offer structural fabrication, precision machining, installation, and maintenance.' },
+  { q: 'Where are you located?', a: 'We are located in Bhosari, Pune, India.' },
+  { q: 'Do you take custom industrial projects?', a: 'Yes, we specialize in customized industrial engineering and fabrication work.' },
+  { q: 'How do I contact for a quote?', a: 'You can call us directly or use our contact form for a quick quotation response.' },
+  { q: 'Are you ISO certified?', a: 'Yes, we are ISO 9001:2015 certified, ensuring top-quality standards in all operations.' },
+  { q: 'Do you support large-scale production?', a: 'Absolutely. Our facility handles bulk and batch production efficiently with modern machinery.' },
+  { q: 'Which industries do you serve?', a: 'We cater to construction, automotive, agriculture, and heavy engineering sectors.' },
+  { q: 'Can I visit your facility?', a: 'Yes, visits can be scheduled with prior appointments for project discussions or audits.' },
+  { q: 'What is your turnaround time?', a: 'Turnaround varies by project size, but we are known for delivering ahead of deadlines consistently.' }
+] }" class="space-y-4">
+
+  <template x-for="(faq, index) in faqs" :key="index">
+    <div class="border border-gray-300 rounded-lg overflow-hidden">
+      <button @click="selected === index ? selected = null : selected = index"
+        class="w-full px-6 py-4 flex justify-between items-center bg-white text-left text-lg font-medium text-gray-900 focus:outline-none">
+        <span x-text="faq.q"></span>
+        <svg :class="{ 'transform rotate-180': selected === index }"
+          class="h-5 w-5 text-orange-600 transition-transform duration-300"
+          fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div x-show="selected === index" x-collapse>
+        <div class="px-6 py-4 bg-gray-50 text-gray-700" x-text="faq.a"></div>
+      </div>
+    </div>
+  </template>
+</div>
+
+    </div>
+  </div>
+</section>
+    </main>
+
+     <!-- Footer -->
+        <footer class="bg-[#0c2752] text-white py-6 text-center text-sm">
+            <p>&copy; 2025 Desai Engineering. All rights reserved.</p>
+        </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

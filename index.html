@@ -1,430 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Desai Engineering</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desai Engineering</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-  <style>
+    <style>
     [x-cloak] { display: none; }
     body { margin: 0; font-family: 'Inter', sans-serif; }
   </style>
-</head>
-<body class="bg-gray-100 text-gray-900">
+  </head>
+  <body class="bg-gray-100 text-gray-900">
 
-  <!-- Header -->
-  <header class="shadow-md w-full bg-white transition-colors duration-300" x-data="{ open: false }">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        
-        <!-- Logo -->
-        <a href="/" class="flex-shrink-0" data-aos="flip-down" data-aos-duration="1000">
-          <!-- SVG LOGO -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
-            <g transform="translate(256,256)">
-              <circle r="160" fill="none" stroke="#EF6C00" stroke-width="40" stroke-dasharray="440 100" transform="rotate(-25)" />
-              <g transform="rotate(-25)">
-                <rect x="-60" y="-50" width="120" height="20" rx="4" fill="black" />
-                <rect x="-60" y="-10" width="100" height="20" rx="4" fill="black" />
-                <rect x="-60" y="30" width="80" height="20" rx="4" fill="black" />
+    <!-- Header -->
+    <header
+      class="shadow-md w-full bg-white transition-colors duration-300 sticky top-0 overflow-hidden z-30"
+      x-data="{ open: false }">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+
+          <!-- Logo -->
+          <a href="/"
+            class="flex justify-center space-x-4 items-center flex-shrink-0"
+            data-aos="flip-down" data-aos-duration="1000">
+            <!-- SVG LOGO -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+              width="48" height="48">
+              <g transform="translate(256,256)">
+                <circle r="160" fill="none" stroke="#EF6C00" stroke-width="40"
+                  stroke-dasharray="440 100" transform="rotate(-25)" />
+                <g transform="rotate(-25)">
+                  <rect x="-60" y="-50" width="120" height="20" rx="4"
+                    fill="black" />
+                  <rect x="-60" y="-10" width="100" height="20" rx="4"
+                    fill="black" />
+                  <rect x="-60" y="30" width="80" height="20" rx="4"
+                    fill="black" />
+                </g>
               </g>
-            </g>
-          </svg>
+            </svg>
 
-          
+            <h2 class="text-center font-serif text-orange-600">Desai
+              Engineering</h2>
+
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex items-center space-x-6">
+            <a href="#"
+              class="border-b-2 border-orange-600 text-orange-600 font-semibold">Home</a>
+            <a href="/aboutUs.html"
+              class="text-gray-700 hover:text-orange-600">About Us</a>
+            <a href="./business-areas.html"
+              class="text-gray-700 hover:text-orange-600">Business Areas</a>
+            <a href="./services.html"
+              class="text-gray-700 hover:text-orange-600">Services</a>
+            <!-- <a href="#" class="text-gray-700 hover:text-orange-600">Infrastructure</a> -->
+            <a href="./faq.html" class="text-gray-700 hover:text-orange-600">FAQ's</a>
+            <!-- <a href="#" class="text-gray-700 hover:text-orange-600">Events</a> -->
+            <!-- <a href="#" class="text-gray-700 hover:text-orange-600">More</a> -->
+            <a href="tel:+918888011628"
+              class="text-gray-700 hover:text-orange-600">Contact</a>
+                   <a href="https://www.google.com/maps/dir/18.6679296,73.7378304/Natraj+Enterprises-Caster+Wheel+%2F+Trolley+Wheel+%2F+Forklift+%2F+Hydraulic+Stacker+Manufacturer+in+Bhosari%2FChakan%2FPune,+S+Block,+MIDC,+Bhosari,+Pimpri-Chinchwad,+Maharashtra/@18.6519258,73.7680673,8618m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bc2b80c06fae0f1:0x30f6ddc0f3ce1e52!2m2!1d73.8364308!2d18.6364352?entry=ttu&g_ep=EgoyMDI1MDcyMi4wIKXMDSoASAFQAw%3D%3D" class="text-gray-700 hover:text-orange-600">Locate us</a>
+
+          </nav>
+
+          <!-- Mobile Menu Toggle -->
+          <div class="md:hidden">
+            <button @click="open = !open"
+              class="text-gray-700 focus:outline-none">
+              <svg x-cloak x-show="!open" xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <svg x-cloak x-show="open" xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Links -->
+      <div x-show="open"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 -translate-y-4"
+        x-transition:enter-end="opacity-100 translate-y-0"
+        x-transition:leave="transition ease-in duration-200"
+        x-transition:leave-start="opacity-100 translate-y-0"
+        x-transition:leave-end="opacity-0 -translate-y-4"
+        class="md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
+        <a href="/" class="block text-orange-600 font-semibold">Home</a>
+        <a href="/aboutUs.html" class="block text-gray-700">About Us</a>
+        <a href="/business-areas.html" class="block text-gray-700">Business Areas</a>
+        <a href="/services.html" class="block text-gray-700">Services</a>
+        <!-- <a href="#" class="block text-gray-700">Infrastructure</a> -->
+        <!-- <a href="#" class="block text-gray-700">Why Desai</a> -->
+        <!-- <a href="#" class="block text-gray-700">Events</a> -->
+        <!-- <a href="#" class="block text-gray-700">More</a> -->
+        <a href="tel:+918888011628" class="text-gray-700 block hover:text-orange-600">Contact</a>
+         <a href="https://www.google.com/maps/dir/18.6679296,73.7378304/Natraj+Enterprises-Caster+Wheel+%2F+Trolley+Wheel+%2F+Forklift+%2F+Hydraulic+Stacker+Manufacturer+in+Bhosari%2FChakan%2FPune,+S+Block,+MIDC,+Bhosari,+Pimpri-Chinchwad,+Maharashtra/@18.6519258,73.7680673,8618m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bc2b80c06fae0f1:0x30f6ddc0f3ce1e52!2m2!1d73.8364308!2d18.6364352?entry=ttu&g_ep=EgoyMDI1MDcyMi4wIKXMDSoASAFQAw%3D%3D" class="text-gray-700 block hover:text-orange-600">Locate us</a>
+             
+
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="relative h-[60vh] overflow-hidden flex items-center justify-center text-white">
+      <video autoplay muted loop
+        class="absolute inset-0 w-full h-full object-cover brightness-50 z-0">
+        <source src="/assets/videos/grind.webm" type="video/webm" />
+      </video>
+      <div class="relative z-10 text-left px-6">
+        <h2
+          class="text-xl md:text-3xl text-orange-600 font-light font-serif mb-2"
+          data-aos="fade-right" data-aos-duration="1500">Metal based</h2>
+        <h1
+          class="text-4xl md:text-5xl font-serif font-bold leading-tight tracking-tight"
+          data-aos="fade-left" data-aos-duration="1500">
+          Engineered Systems &<br />Components
+        </h1>
+      </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="relative z-20 -mt-24 px-4 md:px-0">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-center gap-6 px-4 py-10">
+
+        <div
+          class="w-80 h-96 rounded-2xl shadow-xl overflow-hidden relative group cursor-pointer transform transition duration-700 hover:scale-105 hover:shadow-2xl translate-y-24"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-offset="300">
+          <img src="./assets/images/aaa.png" alt="Advanced Machinery"
+            class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div
+            class="relative z-10 p-5 text-white flex flex-col justify-end h-full">
+            <h3 class="text-xl font-semibold">Advanced Machinery</h3>
+            <p class="text-sm text-gray-200">High precision metal equipment.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="w-80 h-96 rounded-2xl shadow-xl overflow-hidden relative group cursor-pointer transform transition duration-700 hover:scale-105 hover:shadow-2xl translate-y-24 mt-10"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-delay="400"
+          data-aos-offset="300">
+          <img src="./assets/images/bbb.png" alt="Industrial Systems"
+            class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div
+            class="relative z-10 p-5 text-white flex flex-col justify-end h-full">
+            <h3 class="text-xl font-semibold">Industrial Systems</h3>
+            <p class="text-sm text-gray-200">Reliable & scalable solutions.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="w-80 h-96 rounded-2xl shadow-xl overflow-hidden relative group cursor-pointer transform transition duration-700 hover:scale-105 hover:shadow-2xl translate-y-24"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-offset="300"
+          data-aos-delay="800">
+          <img src="./assets/images/ccc.png" alt="Custom Engineering"
+            class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div
+            class="relative z-10 p-5 text-white flex flex-col justify-end h-full">
+            <h3 class="text-xl font-semibold">Custom Engineering</h3>
+            <p class="text-sm text-gray-200">Tailored metal components.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Business Areas Section -->
+    <section
+      class="relative w-full flex items-center justify-center overflow-hidden pb-10">
+      <video autoplay muted loop playsinline
+        class="absolute w-full h-full object-cover brightness-75 opacity-25">
+        <source src="/assets/videos/grind.webm" type="video/webm" />
+      </video>
+
+      <div class="relative z-10 text-center max-w-4xl px-4 " data-aos="fade-up"
+        data-aos-duration="1000">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 mt-6 font-serif"
+          style="color: #0c2752;">
+          Business Areas
+        </h2>
+        <p
+          class="text-lg md:text-xl leading-relaxed text-[#0c2752] mb-8 font-serif"
+          data-aos="fade-up" data-aos-delay="200">
+          <strong>Desai Engineering</strong> delivers precision-engineered
+          solutions and metal-based systems
+          for a wide spectrum of industries including Earthmoving & Construction
+          Equipment, Road Compaction,
+          Power Generation, Material Handling, and Industrial Automation.
+        </p>
+        <p
+          class="mt-4 text-lg md:text-xl leading-relaxed text-[#0c2752]  font-serif"
+          data-aos="fade-up" data-aos-delay="400">
+          We are recognized as a trusted partner by leading OEMs and industry
+          leaders for our commitment to
+          <strong>quality, innovation, and long-term collaboration</strong>.
+          Backed by advanced infrastructure and a passionate workforce, we
+          deliver customized engineering
+          solutions that enhance efficiency, reliability, and performance.
+        </p>
+        <a href="#about"
+          class="inline-block mt-6 px-6 py-3 text-white font-semibold rounded-lg shadow-md transition duration-300 ease-in-out bg-[#0c2752] hover:bg-[#0c1a31] hover:scale-105"
+          data-aos="fade-right" data-aos-delay="600">
+          Know More
         </a>
-        
+      </div>
 
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center space-x-6">
-          <a href="#" class="border-b-2 border-orange-600 text-orange-600 font-semibold">Home</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">About Us</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">Business Areas</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">Services</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">Infrastructure</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">Why Desai</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">Events</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">More</a>
-        </nav>
+    </section>
 
-        <!-- Mobile Menu Toggle -->
-        <div class="md:hidden">
-          <button @click="open = !open" class="text-gray-700 focus:outline-none">
-            <svg x-cloak x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-              viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <svg x-cloak x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-              viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M6 18L18 6M6 6l12 12" />
-            </svg>
+    <!-- Cards Section -->
+    <section class="relative z-20 mt-0 px-4 md:px-0">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-center gap-6 px-4 py-10">
+
+        <div
+          class="w-80 h-96 rounded-2xl shadow-xl overflow-hidden relative group cursor-pointer transform transition duration-700 hover:scale-105 hover:shadow-2xl translate-y-24"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-offset="300">
+          <img src="./assets/images/aaa.png" alt="Advanced Machinery"
+            class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div
+            class="relative z-10 p-5 text-white flex flex-col justify-end h-full">
+            <h3 class="text-xl font-semibold">Advanced Machinery</h3>
+            <p class="text-sm text-gray-200">High precision metal equipment.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="w-80 h-96 rounded-2xl shadow-xl overflow-hidden relative group cursor-pointer transform transition duration-700 hover:scale-105 hover:shadow-2xl translate-y-24"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-offset="300"
+          data-aos-delay="800">
+          <img src="./assets/images/ccc.png" alt="Custom Engineering"
+            class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div
+            class="relative z-10 p-5 text-white flex flex-col justify-end h-full">
+            <h3 class="text-xl font-semibold">Custom Engineering</h3>
+            <p class="text-sm text-gray-200">Tailored metal components.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Parallax Section -->
+    <section class="relative overflow-hidden bg-white py-16">
+      <!-- Parallax Background -->
+      <div class="absolute inset-0 bg-fixed bg-center bg-cover opacity-20"
+        style="background-image: url('./assets/images/aaa.png');">
+      </div>
+
+      <!-- Content Wrapper -->
+      <div
+        class="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 px-4"
+        data-aos="fade-up" data-aos-duration="1000">
+
+        <!-- Text Content -->
+        <div class="flex-1 text-gray-800" data-aos="fade-right"
+          data-aos-duration="2000">
+          <h2 class="text-4xl font-bold mb-6 font-serif text-[#0c2752]">About
+            Us</h2>
+          <p class="text-lg leading-relaxed font-serif">
+            We are <strong>Desai Engineering</strong>, a trusted name in
+            precision metal fabrication and industrial solutions. Based in
+            India, our company proudly employs over 700 skilled professionals
+            and serves clients worldwide—exporting over 30% of our production.
+          </p>
+          <p class="mt-6 text-lg leading-relaxed font-serif">
+            Operating from <strong>four state-of-the-art
+              facilities</strong>—three in Pune and one in Pithampur (near
+            Indore)—we have the capability to process more than <strong>60,000
+              metric tons of steel annually</strong>, meeting global standards
+            in quality and innovation.
+          </p>
+        </div>
+
+        <!-- Video Embed -->
+        <div class="flex-1 w-full aspect-video">
+          <iframe class="w-full h-64 md:h-full rounded-xl shadow-lg"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Desai Engineering Video"
+            frameborder="0"
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+          </iframe>
+        </div>
+
+      </div>
+    </section>
+    <!-- Highlights Section -->
+    <section class="bg-[#0c2752] py-16 text-white">
+      <div
+        class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4 text-center"
+        data-aos="fade-up">
+
+        <!-- Plant Icon -->
+        <div data-aos="fade-right" data-aos-duration="2000">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/factory.png"
+            class="mx-auto mb-4" data-aos="zoom-in" data-aos-duration="1000"
+            alt="Factory Icon">
+          <h4 class="text-xl font-serif mb-2">4 Manufacturing Plants</h4>
+          <p class="text-sm">Located in Pune and Pithampur with cutting-edge
+            facilities.</p>
+        </div>
+
+        <!-- Gear Icon -->
+        <div data-aos="fade-right" data-aos-duration="2000"
+          data-aos-delay="400">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/maintenance.png"
+            data-aos="zoom-in" data-aos-duration="1000" class="mx-auto mb-4"
+            alt="Capacity Icon">
+          <h4 class="text-xl font-bold mb-2">60,000 MT Capacity</h4>
+          <p class="text-sm">Annual steel processing capacity meeting global
+            standards.</p>
+        </div>
+
+        <!-- Globe Icon -->
+        <div data-aos="fade-right" data-aos-duration="2000"
+          data-aos-delay="600">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/globe.png"
+            data-aos="zoom-in" data-aos-duration="1000" class="mx-auto mb-4"
+            alt="Globe Icon">
+          <h4 class="text-xl font-bold mb-2">Global Reach</h4>
+          <p class="text-sm">30% of revenue from exports—trusted by global
+            OEMs.</p>
+        </div>
+
+        <!-- Team Icon -->
+        <div data-aos="fade-right" data-aos-duration="2000"
+          data-aos-delay="800">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/conference.png"
+            data-aos="zoom-in" data-aos-duration="1000" class="mx-auto mb-4"
+            alt="Team Icon">
+          <h4 class="text-xl font-bold mb-2">700+ Employees</h4>
+          <p class="text-sm">Skilled professionals powering innovation and
+            delivery.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="bg-white py-20" data-aos="fade-up" data-aos-offset="200">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-[#0c2752] mb-10">Why Choose Desai
+          Engineering?</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+          <!-- Card 1 -->
+          <div
+            class="shadow-xl p-6 rounded-xl hover:shadow-2xl transition duration-300 cursor-pointer">
+            <img
+              src="https://img.icons8.com/ios-filled/50/0c2752/light-on--v1.png"
+              data-aos="zoom-in" data-aos-duration="1000" class="mx-auto mb-4"
+              alt="Innovation">
+            <h4
+              class="text-xl font-semibold mb-2 text-[#0c2752]">Innovation-Driven</h4>
+            <p class="text-gray-600 text-sm">From prototyping to large-scale
+              production, we harness cutting-edge techniques to deliver
+              future-ready solutions.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="shadow-xl p-6 rounded-xl hover:shadow-2xl transition duration-300 cursor-pointer">
+            <img src="https://img.icons8.com/ios-filled/50/0c2752/ok--v1.png"
+              data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200"
+              class="mx-auto mb-4" alt="Quality">
+            <h4
+              class="text-xl font-semibold mb-2 text-[#0c2752]">Quality-Focused</h4>
+            <p class="text-gray-600 text-sm">With robust processes and stringent
+              checks, we maintain international standards in every product.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="shadow-xl p-6 rounded-xl hover:shadow-2xl transition duration-300 cursor-pointer">
+            <img
+              src="https://img.icons8.com/ios-filled/50/0c2752/handshake--v1.png"
+              data-aos-duration="1000" data-aos="zoom-in" data-aos-delay="400"
+              class="mx-auto mb-4" alt="Client Focus">
+            <h4 class="text-xl font-semibold mb-2 text-[#0c2752]">Client-Centric
+              Approach</h4>
+            <p class="text-gray-600 text-sm">We forge long-term partnerships by
+              aligning with your goals and exceeding expectations
+              consistently.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-[#f4f7fc] py-16" id="contact" data-aos="fade-up">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-[#0c2752] mb-10">Get in Touch</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <!-- Contact Info -->
+          <div class="text-left">
+            <h3 class="text-xl font-semibold mb-4 text-[#0c2752]">Contact
+              Information</h3>
+            <p class="text-gray-600 mb-2">📍 Address: MIDC Industrial Area,
+              Pune, India</p>
+            <p class="text-gray-600 mb-2">📞 Phone: +918888011628</p>
+            <p class="text-gray-600 mb-2">✉️ Email:
+              info@desaiengineering.com</p>
+            <p class="text-gray-600">🕒 Working Hours: Mon–Sat | 9AM–6PM</p>
+            <div class="rounded-xl mt-5 shadow-lg overflow-hidden"
+              data-aos="zoom-in" data-aos-duration="1000">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.6838453702464!2d73.84385047510662!3d18.642305982495947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c722d78b34fb%3A0xf97821a38817de7f!2sBhosari%2C%20Pimpri-Chinchwad%2C%20Maharashtra%20411026!5e0!3m2!1sen!2sin!4v1690182560484!5m2!1sen!2sin"
+                width="100%"
+                height="200"
+                style="border:0;"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <form class="bg-white p-6 rounded-lg shadow-md text-left">
+            <div class="mb-4">
+              <label
+                class="block text-sm font-medium text-gray-700">Name</label>
+              <input type="text" placeholder="Your Name"
+                class="w-full px-4 py-2 border rounded-md" />
+            </div>
+            <div class="mb-4">
+              <label
+                class="block text-sm font-medium text-gray-700">Email</label>
+              <input type="email" placeholder="you@example.com"
+                class="w-full px-4 py-2 border rounded-md" />
+            </div>
+            <div class="mb-4">
+              <label
+                class="block text-sm font-medium text-gray-700">Message</label>
+              <textarea rows="4" placeholder="Your message..."
+                class="w-full px-4 py-2 border rounded-md"></textarea>
+            </div>
+            <button type="submit"
+              class="bg-[#0c2752] text-white px-6 py-2 rounded-md hover:bg-[#183d7a] transition duration-300">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="bg-[#0c2752] py-12 text-white text-center"
+      data-aos="fade-up">
+      <div class="max-w-xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+        <p class="mb-6">Subscribe to our newsletter for the latest updates,
+          innovations, and insights from Desai Engineering.</p>
+        <form class="flex flex-col sm:flex-row gap-4 justify-center">
+          <input type="email" placeholder="Enter your email"
+            class="w-full sm:w-auto px-6 py-3 rounded-md text-gray-800" />
+          <button type="submit"
+            class="bg-white text-[#0c2752] font-semibold px-6 py-3 rounded-md hover:bg-gray-200 transition duration-300">
+            Subscribe
           </button>
-        </div>
+        </form>
       </div>
-    </div>
+    </section>
 
-    <!-- Mobile Menu Links -->
-    <div x-show="open"
-      x-transition:enter="transition ease-out duration-300"
-      x-transition:enter-start="opacity-0 -translate-y-4"
-      x-transition:enter-end="opacity-100 translate-y-0"
-      x-transition:leave="transition ease-in duration-200"
-      x-transition:leave-start="opacity-100 translate-y-0"
-      x-transition:leave-end="opacity-0 -translate-y-4"
-      class="md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
-      <a href="#" class="block text-orange-600 font-semibold">Home</a>
-      <a href="#" class="block text-gray-700">About Us</a>
-      <a href="#" class="block text-gray-700">Business Areas</a>
-      <a href="#" class="block text-gray-700">Services</a>
-      <a href="#" class="block text-gray-700">Infrastructure</a>
-      <a href="#" class="block text-gray-700">Why Desai</a>
-      <a href="#" class="block text-gray-700">Events</a>
-      <a href="#" class="block text-gray-700">More</a>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="relative h-[60vh] overflow-hidden flex items-center justify-center text-white">
-    <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover brightness-50 z-0">
-      <source src="/assets/videos/grind.webm" type="video/webm" />
-    </video>
-    <div class="relative z-10 text-left px-6">
-      <h2 class="text-xl md:text-3xl text-orange-600 font-light font-serif mb-2" data-aos="fade-right" data-aos-duration="1500">Metal based</h2>
-      <h1 class="text-4xl md:text-5xl font-serif font-bold leading-tight tracking-tight" data-aos="fade-left" data-aos-duration="1500">
-        Engineered Systems &<br />Components
-      </h1>
-    </div>
-  </section>
-
-  <!-- Cards Section -->
-  <section class="relative z-20 -mt-24 px-4 md:px-0">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-center gap-6 px-4 py-10">
-
+    <!-- Footer -->
+    <footer class="bg-[#0c2752] text-white py-8">
       <div
-  class="w-80 h-96 rounded-2xl shadow-xl overflow-hidden relative group cursor-pointer transform transition duration-700 hover:scale-105 hover:shadow-2xl translate-y-24"
-  data-aos="fade-up"
-  data-aos-duration="1200"
-  data-aos-offset="300"
->
-  <img src="./assets/images/aaa.png" alt="Advanced Machinery"
-    class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110" />
-  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-  <div
-    class="relative z-10 p-5 text-white flex flex-col justify-end h-full">
-    <h3 class="text-xl font-semibold">Advanced Machinery</h3>
-    <p class="text-sm text-gray-200">High precision metal equipment.</p>
-  </div>
-</div>
-
-
-      <!-- Card 2 -->
- <div
-  class="w-80 h-96 rounded-2xl shadow-xl overflow-hidden relative group cursor-pointer transform transition duration-700 hover:scale-105 hover:shadow-2xl translate-y-24 mt-10"
-  data-aos="fade-up"
-  data-aos-duration="1200"
-  data-aos-delay="400"
-  data-aos-offset="300"
->
-        <img src="./assets/images/bbb.png" alt="Industrial Systems"
-          class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110" />
-        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div class="relative z-10 p-5 text-white flex flex-col justify-end h-full">
-          <h3 class="text-xl font-semibold">Industrial Systems</h3>
-          <p class="text-sm text-gray-200">Reliable & scalable solutions.</p>
+        class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-sm">&copy; 2025 Desai Engineering. All Rights
+          Reserved.</p>
+        <div class="flex space-x-4 mt-4 md:mt-0">
+          <a href="#" class="hover:underline text-sm">Privacy Policy</a>
+          <a href="#" class="hover:underline text-sm">Terms of Service</a>
+          <a href="#" class="hover:underline text-sm">Contact</a>
         </div>
       </div>
+    </footer>
 
-      <!-- Card 3 -->
-    <div
-  class="w-80 h-96 rounded-2xl shadow-xl overflow-hidden relative group cursor-pointer transform transition duration-700 hover:scale-105 hover:shadow-2xl translate-y-24"
-  data-aos="fade-up"
-  data-aos-duration="1200"
-  data-aos-offset="300"
-  data-aos-delay="800"
->
-        <img src="./assets/images/ccc.png" alt="Custom Engineering"
-          class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110" />
-        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div class="relative z-10 p-5 text-white flex flex-col justify-end h-full">
-          <h3 class="text-xl font-semibold">Custom Engineering</h3>
-          <p class="text-sm text-gray-200">Tailored metal components.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Business Areas Section -->
-  <section class="relative w-full flex items-center justify-center overflow-hidden pb-10">
-    <video autoplay muted loop playsinline
-      class="absolute w-full h-full object-cover brightness-75 opacity-25">
-      <source src="/assets/videos/grind.webm" type="video/webm" />
-    </video>
-
-    <div class="relative z-10 text-center max-w-4xl px-4 " data-aos="fade-up" data-aos-duration="1000">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6 mt-6 font-serif" style="color: #0c2752;">
-        Business Areas
-      </h2>
-      <p class="text-lg md:text-xl leading-relaxed text-[#0c2752] mb-8 font-serif"
-        data-aos="fade-up" data-aos-delay="200">
-        <strong>Desai Engineering</strong> delivers precision-engineered solutions and metal-based systems
-        for a wide spectrum of industries including Earthmoving & Construction Equipment, Road Compaction,
-        Power Generation, Material Handling, and Industrial Automation.
-      </p>
-      <p class="mt-4 text-lg md:text-xl leading-relaxed text-[#0c2752]  font-serif"
-        data-aos="fade-up" data-aos-delay="400">
-        We are recognized as a trusted partner by leading OEMs and industry leaders for our commitment to
-        <strong>quality, innovation, and long-term collaboration</strong>.
-        Backed by advanced infrastructure and a passionate workforce, we deliver customized engineering
-        solutions that enhance efficiency, reliability, and performance.
-      </p>
-     <a href="#about"
-        class="inline-block mt-6 px-6 py-3 text-white font-semibold rounded-lg shadow-md transition duration-300 ease-in-out bg-[#0c2752] hover:bg-[#0c1a31] hover:scale-105"
-        data-aos="fade-right" data-aos-delay="600">
-        Know More
-      </a>
-    </div>
-
-     
-  </section>
-
-  <!-- Cards Section -->
-  <section class="relative z-20 mt-0 px-4 md:px-0">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-center gap-6 px-4 py-10">
-
-      <div
-  class="w-80 h-96 rounded-2xl shadow-xl overflow-hidden relative group cursor-pointer transform transition duration-700 hover:scale-105 hover:shadow-2xl translate-y-24"
-  data-aos="fade-up"
-  data-aos-duration="1200"
-  data-aos-offset="300"
->
-  <img src="./assets/images/aaa.png" alt="Advanced Machinery"
-    class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110" />
-  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-  <div
-    class="relative z-10 p-5 text-white flex flex-col justify-end h-full">
-    <h3 class="text-xl font-semibold">Advanced Machinery</h3>
-    <p class="text-sm text-gray-200">High precision metal equipment.</p>
-  </div>
-</div>
-
-
-    
-
-      <!-- Card 3 -->
-    <div
-  class="w-80 h-96 rounded-2xl shadow-xl overflow-hidden relative group cursor-pointer transform transition duration-700 hover:scale-105 hover:shadow-2xl translate-y-24"
-  data-aos="fade-up"
-  data-aos-duration="1200"
-  data-aos-offset="300"
-  data-aos-delay="800"
->
-        <img src="./assets/images/ccc.png" alt="Custom Engineering"
-          class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110" />
-        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div class="relative z-10 p-5 text-white flex flex-col justify-end h-full">
-          <h3 class="text-xl font-semibold">Custom Engineering</h3>
-          <p class="text-sm text-gray-200">Tailored metal components.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-<!-- Parallax Section -->
-<section class="relative overflow-hidden bg-white py-16">
-  <!-- Parallax Background -->
-  <div class="absolute inset-0 bg-fixed bg-center bg-cover opacity-20"
-       style="background-image: url('./assets/images/aaa.png');">
-  </div>
-
-  <!-- Content Wrapper -->
-  <div class="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 px-4"
-       data-aos="fade-up" data-aos-duration="1000">
-
-    <!-- Text Content -->
-    <div class="flex-1 text-gray-800" data-aos="fade-right" data-aos-duration="2000">
-      <h2 class="text-4xl font-bold mb-6 font-serif text-[#0c2752]">About Us</h2>
-      <p class="text-lg leading-relaxed font-serif">
-        We are <strong>Desai Engineering</strong>, a trusted name in precision metal fabrication and industrial solutions. Based in India, our company proudly employs over 700 skilled professionals and serves clients worldwide—exporting over 30% of our production.
-      </p>
-      <p class="mt-6 text-lg leading-relaxed font-serif">
-        Operating from <strong>four state-of-the-art facilities</strong>—three in Pune and one in Pithampur (near Indore)—we have the capability to process more than <strong>60,000 metric tons of steel annually</strong>, meeting global standards in quality and innovation.
-      </p>
-    </div>
-
-    <!-- Video Embed -->
-    <div class="flex-1 w-full aspect-video">
-      <iframe class="w-full h-64 md:h-full rounded-xl shadow-lg"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-              title="Desai Engineering Video" 
-              frameborder="0" 
-              allowfullscreen
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-      </iframe>
-    </div>
-
-  </div>
-</section>
-<!-- Highlights Section -->
-<section class="bg-[#0c2752] py-16 text-white">
-  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4 text-center" data-aos="fade-up">
-
-    <!-- Plant Icon -->
-    <div data-aos="fade-right" data-aos-duration="2000">
-      <img src="https://img.icons8.com/ios-filled/50/ffffff/factory.png" class="mx-auto mb-4" data-aos="zoom-in" data-aos-duration="1000" alt="Factory Icon">
-      <h4 class="text-xl font-serif mb-2">4 Manufacturing Plants</h4>
-      <p class="text-sm">Located in Pune and Pithampur with cutting-edge facilities.</p>
-    </div>
-
-    <!-- Gear Icon -->
-    <div data-aos="fade-right" data-aos-duration="2000" data-aos-delay="400" >
-      <img src="https://img.icons8.com/ios-filled/50/ffffff/maintenance.png" data-aos="zoom-in" data-aos-duration="1000" class="mx-auto mb-4" alt="Capacity Icon">
-      <h4 class="text-xl font-bold mb-2">60,000 MT Capacity</h4>
-      <p class="text-sm">Annual steel processing capacity meeting global standards.</p>
-    </div>
-
-    <!-- Globe Icon -->
-    <div data-aos="fade-right" data-aos-duration="2000" data-aos-delay="600">
-      <img src="https://img.icons8.com/ios-filled/50/ffffff/globe.png" data-aos="zoom-in" data-aos-duration="1000" class="mx-auto mb-4" alt="Globe Icon">
-      <h4 class="text-xl font-bold mb-2">Global Reach</h4>
-      <p class="text-sm">30% of revenue from exports—trusted by global OEMs.</p>
-    </div>
-
-    <!-- Team Icon -->
-    <div data-aos="fade-right" data-aos-duration="2000" data-aos-delay="800">
-      <img src="https://img.icons8.com/ios-filled/50/ffffff/conference.png" data-aos="zoom-in" data-aos-duration="1000" class="mx-auto mb-4" alt="Team Icon">
-      <h4 class="text-xl font-bold mb-2">700+ Employees</h4>
-      <p class="text-sm">Skilled professionals powering innovation and delivery.</p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- Why Choose Us Section -->
-<section class="bg-white py-20" data-aos="fade-up" data-aos-offset="200">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <h2 class="text-4xl font-bold text-[#0c2752] mb-10">Why Choose Desai Engineering?</h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-
-      <!-- Card 1 -->
-      <div class="shadow-xl p-6 rounded-xl hover:shadow-2xl transition duration-300 cursor-pointer">
-        <img src="https://img.icons8.com/ios-filled/50/0c2752/light-on--v1.png" data-aos="zoom-in" data-aos-duration="1000" class="mx-auto mb-4" alt="Innovation">
-        <h4 class="text-xl font-semibold mb-2 text-[#0c2752]">Innovation-Driven</h4>
-        <p class="text-gray-600 text-sm">From prototyping to large-scale production, we harness cutting-edge techniques to deliver future-ready solutions.</p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="shadow-xl p-6 rounded-xl hover:shadow-2xl transition duration-300 cursor-pointer">
-        <img src="https://img.icons8.com/ios-filled/50/0c2752/ok--v1.png" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200" class="mx-auto mb-4" alt="Quality">
-        <h4 class="text-xl font-semibold mb-2 text-[#0c2752]">Quality-Focused</h4>
-        <p class="text-gray-600 text-sm">With robust processes and stringent checks, we maintain international standards in every product.</p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="shadow-xl p-6 rounded-xl hover:shadow-2xl transition duration-300 cursor-pointer">
-        <img src="https://img.icons8.com/ios-filled/50/0c2752/handshake--v1.png" data-aos-duration="1000" data-aos="zoom-in" data-aos-delay="400" class="mx-auto mb-4" alt="Client Focus">
-        <h4 class="text-xl font-semibold mb-2 text-[#0c2752]">Client-Centric Approach</h4>
-        <p class="text-gray-600 text-sm">We forge long-term partnerships by aligning with your goals and exceeding expectations consistently.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Contact Section -->
-<section class="bg-[#f4f7fc] py-16" id="contact" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <h2 class="text-4xl font-bold text-[#0c2752] mb-10">Get in Touch</h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-      <!-- Contact Info -->
-      <div class="text-left">
-        <h3 class="text-xl font-semibold mb-4 text-[#0c2752]">Contact Information</h3>
-        <p class="text-gray-600 mb-2">📍 Address: MIDC Industrial Area, Pune, India</p>
-        <p class="text-gray-600 mb-2">📞 Phone: +91-12345-67890</p>
-        <p class="text-gray-600 mb-2">✉️ Email: info@desaiengineering.com</p>
-        <p class="text-gray-600">🕒 Working Hours: Mon–Sat | 9AM–6PM</p>
-      <div class="rounded-xl mt-5 shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-duration="1000">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.6838453702464!2d73.84385047510662!3d18.642305982495947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c722d78b34fb%3A0xf97821a38817de7f!2sBhosari%2C%20Pimpri-Chinchwad%2C%20Maharashtra%20411026!5e0!3m2!1sen!2sin!4v1690182560484!5m2!1sen!2sin"
-        width="100%"
-        height="200"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-      </div>
-
-      <!-- Contact Form -->
-      <form class="bg-white p-6 rounded-lg shadow-md text-left">
-        <div class="mb-4">
-          <label class="block text-sm font-medium text-gray-700">Name</label>
-          <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border rounded-md" />
-        </div>
-        <div class="mb-4">
-          <label class="block text-sm font-medium text-gray-700">Email</label>
-          <input type="email" placeholder="you@example.com" class="w-full px-4 py-2 border rounded-md" />
-        </div>
-        <div class="mb-4">
-          <label class="block text-sm font-medium text-gray-700">Message</label>
-          <textarea rows="4" placeholder="Your message..." class="w-full px-4 py-2 border rounded-md"></textarea>
-        </div>
-        <button type="submit" class="bg-[#0c2752] text-white px-6 py-2 rounded-md hover:bg-[#183d7a] transition duration-300">
-          Send Message
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
-
-
-<!-- Newsletter Signup -->
-<section class="bg-[#0c2752] py-12 text-white text-center" data-aos="fade-up">
-  <div class="max-w-xl mx-auto px-4">
-    <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
-    <p class="mb-6">Subscribe to our newsletter for the latest updates, innovations, and insights from Desai Engineering.</p>
-    <form class="flex flex-col sm:flex-row gap-4 justify-center">
-      <input type="email" placeholder="Enter your email" class="w-full sm:w-auto px-6 py-3 rounded-md text-gray-800" />
-      <button type="submit" class="bg-white text-[#0c2752] font-semibold px-6 py-3 rounded-md hover:bg-gray-200 transition duration-300">
-        Subscribe
-      </button>
-    </form>
-  </div>
-</section>
-
-
-<!-- Footer -->
-<footer class="bg-[#0c2752] text-white py-8">
-  <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-    <p class="text-sm">&copy; 2025 Desai Engineering. All Rights Reserved.</p>
-    <div class="flex space-x-4 mt-4 md:mt-0">
-      <a href="#" class="hover:underline text-sm">Privacy Policy</a>
-      <a href="#" class="hover:underline text-sm">Terms of Service</a>
-      <a href="#" class="hover:underline text-sm">Contact</a>
-    </div>
-  </div>
-</footer>
-
-
-
-
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
     AOS.init({ duration: 1000, once: true });
   </script>
 
-</body>
+  </body>
 </html>

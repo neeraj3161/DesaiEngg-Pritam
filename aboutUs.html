@@ -16,82 +16,62 @@
 <body class="bg-white text-gray-800">
 
      <!-- Header -->
-  <header class="shadow-md w-full bg-white transition-colors duration-300" x-data="{ open: false }">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        
-        <!-- Logo -->
-        <a href="/" class="flex-shrink-0" data-aos="flip-down" data-aos-duration="1000">
-          <!-- SVG LOGO -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
-            <g transform="translate(256,256)">
-              <circle r="160" fill="none" stroke="#EF6C00" stroke-width="40" stroke-dasharray="440 100" transform="rotate(-25)" />
-              <g transform="rotate(-25)">
-                <rect x="-60" y="-50" width="120" height="20" rx="4" fill="black" />
-                <rect x="-60" y="-10" width="100" height="20" rx="4" fill="black" />
-                <rect x="-60" y="30" width="80" height="20" rx="4" fill="black" />
+  <header class="shadow-md w-full bg-white sticky top-0 z-30" x-data="{ open: false }">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a href="/" class="flex items-center space-x-4" data-aos="flip-down" data-aos-duration="1000">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
+              <g transform="translate(256,256)">
+                <circle r="160" fill="none" stroke="#EF6C00" stroke-width="40"
+                  stroke-dasharray="440 100" transform="rotate(-25)" />
+                <g transform="rotate(-25)">
+                  <rect x="-60" y="-50" width="120" height="20" rx="4" fill="black" />
+                  <rect x="-60" y="-10" width="100" height="20" rx="4" fill="black" />
+                  <rect x="-60" y="30" width="80" height="20" rx="4" fill="black" />
+                </g>
               </g>
-            </g>
-          </svg>
-
-          
-        </a>
-        
-
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center space-x-6">
-          <a href="#" class="border-b-2 border-orange-600 text-orange-600 font-semibold">Home</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">About Us</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">Business Areas</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">Services</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">Infrastructure</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">Why Desai</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">Events</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">More</a>
-        </nav>
-
-        <!-- Mobile Menu Toggle -->
-        <div class="md:hidden">
-          <button @click="open = !open" class="text-gray-700 focus:outline-none">
-            <svg x-cloak x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-              viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16" />
             </svg>
-            <svg x-cloak x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-              viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+            <h2 class="font-serif text-orange-600">Desai Engineering</h2>
+          </a>
+          <nav class="hidden md:flex items-center space-x-6">
+            <a href="/" class="text-gray-700 hover:text-orange-600">Home</a>
+            <a href="/aboutUs.html" class="border-b-2 border-orange-600 text-orange-600 font-semibold">About Us</a>
+            <a href="./business-areas.html" class="text-gray-700 hover:text-orange-600">Business Areas</a>
+            <a href="./services.html" class="text-gray-700 hover:text-orange-600">Services</a>
+            <a href="/faq.html" class="text-gray-700 hover:text-orange-600">FAQ's</a>
+            <a href="tel:+918888011628" class="text-gray-700 block hover:text-orange-600">Contact</a>
+         <a href="https://www.google.com/maps/dir/18.6679296,73.7378304/Natraj+Enterprises-Caster+Wheel+%2F+Trolley+Wheel+%2F+Forklift+%2F+Hydraulic+Stacker+Manufacturer+in+Bhosari%2FChakan%2FPune,+S+Block,+MIDC,+Bhosari,+Pimpri-Chinchwad,+Maharashtra/@18.6519258,73.7680673,8618m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bc2b80c06fae0f1:0x30f6ddc0f3ce1e52!2m2!1d73.8364308!2d18.6364352?entry=ttu&g_ep=EgoyMDI1MDcyMi4wIKXMDSoASAFQAw%3D%3D" class="text-gray-700 block hover:text-orange-600">Locate us</a>
+          </nav>
+          <div class="md:hidden">
+            <button @click="open = !open" class="text-gray-700 focus:outline-none">
+              <svg x-cloak x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <svg x-cloak x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- Mobile Menu Links -->
-    <div x-show="open"
-      x-transition:enter="transition ease-out duration-300"
-      x-transition:enter-start="opacity-0 -translate-y-4"
-      x-transition:enter-end="opacity-100 translate-y-0"
-      x-transition:leave="transition ease-in duration-200"
-      x-transition:leave-start="opacity-100 translate-y-0"
-      x-transition:leave-end="opacity-0 -translate-y-4"
-      class="md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
-      <a href="#" class="block text-orange-600 font-semibold">Home</a>
-      <a href="#" class="block text-gray-700">About Us</a>
-      <a href="#" class="block text-gray-700">Business Areas</a>
-      <a href="#" class="block text-gray-700">Services</a>
-      <a href="#" class="block text-gray-700">Infrastructure</a>
-      <a href="#" class="block text-gray-700">Why Desai</a>
-      <a href="#" class="block text-gray-700">Events</a>
-      <a href="#" class="block text-gray-700">More</a>
-    </div>
-  </header>
-
+      <div x-show="open" x-transition class="md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
+        <a href="/" class="block text-gray-700">Home</a>
+        <a href="aboutUs.html" class="block text-orange-600 font-semibold hover:text-orange-600">About Us</a>
+        <a href="/business-areas.html" class="block text-gray-700">Business Areas</a>
+        <a href="/services.html" class="block text-gray-700">Services</a>
+        <a href="/faq.html" class="block text-gray-700">FAQ's</a>
+        <a href="tel:+918888011628" class="block text-gray-700 ">Contact</a>
+        <a href="https://www.google.com/maps/dir/18.6679296,73.7378304/Natraj+Enterprises-Caster+Wheel+%2F+Trolley+Wheel+%2F+Forklift+%2F+Hydraulic+Stacker+Manufacturer+in+Bhosari%2FChakan%2FPune,+S+Block,+MIDC,+Bhosari,+Pimpri-Chinchwad,+Maharashtra/@18.6519258,73.7680673,8618m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bc2b80c06fae0f1:0x30f6ddc0f3ce1e52!2m2!1d73.8364308!2d18.6364352?entry=ttu&g_ep=EgoyMDI1MDcyMi4wIKXMDSoASAFQAw%3D%3D" class="text-gray-700 block">Locate us</a>
+      </div>
+    </header>
  
   <!-- Hero Section -->
 <section class="bg-[#0c2752]  text-white py-20">
-    <div class="max-w-5xl mx-auto px-4 text-center" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto px-4 text-center" data-aos="fade-up" data-aos-duration="1000">
       <h1 class="text-5xl font-bold mb-4">About Desai Engineering</h1>
       <p class="text-lg max-w-2xl mx-auto">
         Precision. Reliability. Innovation. These are the values that drive us.
@@ -101,7 +81,7 @@
 
   <!-- Company Overview -->
   <section class="py-20 bg-[#f8fafc]">
-    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center" data-aos="fade-right" data-aos-duration="1000">
       <div>
         <h2 class="text-3xl font-bold text-[#0c2752] mb-6">Who We Are</h2>
         <p class="text-gray-700 text-lg leading-relaxed">
@@ -117,7 +97,7 @@
 
   <!-- Mission & Vision -->
   <section class="py-20">
-    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center" data-aos="fade-up" data-aos-duration="1000">
       <img src="https://images.unsplash.com/photo-1581090700227-2fe7aaf4130d" alt="Innovation" class="rounded-lg shadow-lg">
       <div>
         <h2 class="text-3xl font-bold text-[#0c2752] mb-6">Our Mission & Vision</h2>
@@ -132,29 +112,29 @@
   </section>
 
   <!-- Stats Section -->
-  <section class="bg-[#0c2752] py-16 text-white text-center" data-aos="fade-up">
+  <section class="bg-[#0c2752] py-16 text-white text-center" data-aos="fade-up" data-aos-duration="1000">
     <div class="max-w-6xl mx-auto px-6 grid sm:grid-cols-2 md:grid-cols-4 gap-10">
       <div>
-        <h3 class="text-4xl font-bold">700+</h3>
+        <h3 class="text-4xl font-bold" data-aos="zoom-in" data-aos-duration="1500">700+</h3>
         <p class="mt-2">Employees</p>
       </div>
       <div>
-        <h3 class="text-4xl font-bold">4</h3>
+        <h3 class="text-4xl font-bold"  data-aos="zoom-in" data-aos-duration="1500">4</h3>
         <p class="mt-2">Manufacturing Plants</p>
       </div>
       <div>
-        <h3 class="text-4xl font-bold">60K+ MT</h3>
+        <h3 class="text-4xl font-bold"  data-aos="zoom-in" data-aos-duration="1500">60K+ MT</h3>
         <p class="mt-2">Steel Processed / Year</p>
       </div>
       <div>
-        <h3 class="text-4xl font-bold">30%+</h3>
+        <h3 class="text-4xl font-bold"  data-aos="zoom-in" data-aos-duration="1500">30%+</h3>
         <p class="mt-2">Exports</p>
       </div>
     </div>
   </section>
 
   <!-- Leadership -->
-  <section class="py-20 bg-[#f8fafc]" data-aos="fade-up">
+  <section class="py-20 bg-[#f8fafc]" data-aos="fade-up" data-aos-duration="1000">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold text-[#0c2752] mb-8">Leadership & Values</h2>
       <p class="text-lg text-gray-700 leading-relaxed">
@@ -165,24 +145,24 @@
 
 
   <!-- Awards & Certifications -->
-<section class="py-20 bg-white" data-aos="fade-up">
+<section class="py-20 bg-white" data-aos="fade-up" data-aos-duration="1000">
   <div class="max-w-6xl mx-auto px-6 text-center">
     <h2 class="text-3xl font-bold text-[#0c2752] mb-10">Awards & Certifications</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
       <div>
-        <img src="https://img.icons8.com/ios-filled/50/0c2752/checked--v1.png" alt="ISO Certified" class="mx-auto h-12 mb-4">
+        <img data-aos="zoom-in" data-aos-duration="1500" src="https://img.icons8.com/ios-filled/50/0c2752/checked--v1.png" alt="ISO Certified" class="mx-auto h-12 mb-4">
         <p class="text-gray-700">ISO 9001:2015 Certified</p>
       </div>
       <div>
-        <img src="https://img.icons8.com/ios-filled/50/0c2752/trophy.png" alt="Excellence Award" class="mx-auto h-12 mb-4">
+        <img data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400" src="https://img.icons8.com/ios-filled/50/0c2752/trophy.png" alt="Excellence Award" class="mx-auto h-12 mb-4">
         <p class="text-gray-700">Excellence in Export Award</p>
       </div>
       <div>
-        <img src="https://img.icons8.com/ios-filled/50/0c2752/security-checked--v1.png" alt="Safety Award" class="mx-auto h-12 mb-4">
+        <img data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600" src="https://img.icons8.com/ios-filled/50/0c2752/security-checked--v1.png" alt="Safety Award" class="mx-auto h-12 mb-4">
         <p class="text-gray-700">National Safety Excellence</p>
       </div>
       <div>
-        <img src="https://img.icons8.com/ios-filled/50/0c2752/leaf.png" alt="Green Manufacturing" class="mx-auto h-12 mb-4">
+        <img data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="700" src="https://img.icons8.com/ios-filled/50/0c2752/leaf.png" alt="Green Manufacturing" class="mx-auto h-12 mb-4">
         <p class="text-gray-700">Green Manufacturing Recognition</p>
       </div>
     </div>
@@ -191,7 +171,7 @@
 
 
 <!-- Sustainability Section -->
-<section class="py-20 bg-[#f1f5f9]" data-aos="fade-up">
+<section class="py-20 bg-[#f1f5f9]" data-aos="fade-up" data-aos-duration="1000">
   <div class="max-w-5xl mx-auto px-6 text-center">
     <h2 class="text-3xl font-bold text-[#0c2752] mb-6">Sustainability & Social Responsibility</h2>
     <p class="text-lg text-gray-700 leading-relaxed">
@@ -205,7 +185,7 @@
 
 
 <!-- Client Logos -->
-<section class="py-20 bg-white" data-aos="fade-up">
+<section class="py-20 bg-white" data-aos="fade-up" data-aos-duration="1000">
   <div class="max-w-6xl mx-auto px-6 text-center">
     <h2 class="text-3xl font-bold text-[#0c2752] mb-10">Trusted by Industry Leaders</h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center">
@@ -219,7 +199,7 @@
 
 
 <!-- Testimonials -->
-<section class="py-20 bg-[#e2e8f0]" data-aos="fade-up">
+<section class="py-20 bg-[#e2e8f0]" data-aos="fade-up" data-aos-duration="1000">
   <div class="max-w-6xl mx-auto px-6 text-center">
     <h2 class="text-3xl font-bold text-[#0c2752] mb-10">What Our Clients Say</h2>
     <div class="grid md:grid-cols-2 gap-8">
@@ -237,7 +217,7 @@
 
 
   <!-- Call to Action -->
-  <section class="bg-[#0c2752] text-white py-12 text-center" data-aos="zoom-in">
+  <section class="bg-[#0c2752] text-white py-12 text-center" data-aos="zoom-in" data-aos-duration="1000">
     <h2 class="text-3xl font-bold mb-4">Want to collaborate with us?</h2>
     <p class="mb-6 text-lg">Get in touch for custom fabrication, OEM solutions, and more.</p>
     <a href="/contact" class="bg-white text-[#0c2752] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Contact Us</a>

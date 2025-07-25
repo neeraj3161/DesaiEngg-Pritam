@@ -15,77 +15,59 @@
 </head>
 <body class="bg-white text-gray-800">
 
-   <header class="shadow-md w-full bg-white transition-colors duration-300" x-data="{ open: false }">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        
-        <!-- Logo -->
-        <a href="/" class="flex-shrink-0" data-aos="flip-down" data-aos-duration="1000">
-          <!-- SVG LOGO -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
-            <g transform="translate(256,256)">
-              <circle r="160" fill="none" stroke="#EF6C00" stroke-width="40" stroke-dasharray="440 100" transform="rotate(-25)" />
-              <g transform="rotate(-25)">
-                <rect x="-60" y="-50" width="120" height="20" rx="4" fill="black" />
-                <rect x="-60" y="-10" width="100" height="20" rx="4" fill="black" />
-                <rect x="-60" y="30" width="80" height="20" rx="4" fill="black" />
+     <header class="shadow-md w-full bg-white sticky top-0 z-30" x-data="{ open: false }">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a href="/" class="flex items-center space-x-4" data-aos="flip-down" data-aos-duration="1000">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
+              <g transform="translate(256,256)">
+                <circle r="160" fill="none" stroke="#EF6C00" stroke-width="40"
+                  stroke-dasharray="440 100" transform="rotate(-25)" />
+                <g transform="rotate(-25)">
+                  <rect x="-60" y="-50" width="120" height="20" rx="4" fill="black" />
+                  <rect x="-60" y="-10" width="100" height="20" rx="4" fill="black" />
+                  <rect x="-60" y="30" width="80" height="20" rx="4" fill="black" />
+                </g>
               </g>
-            </g>
-          </svg>
-
-          
-        </a>
-        
-
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center space-x-6">
-          <a href="#" class="border-b-2 border-orange-600 text-orange-600 font-semibold">Home</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">About Us</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">Business Areas</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">Services</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">Infrastructure</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">Why Desai</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">Events</a>
-          <a href="#" class="text-gray-700 hover:text-orange-600">More</a>
-        </nav>
-
-        <!-- Mobile Menu Toggle -->
-        <div class="md:hidden">
-          <button @click="open = !open" class="text-gray-700 focus:outline-none">
-            <svg x-cloak x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-              viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16" />
             </svg>
-            <svg x-cloak x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-              viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+            <h2 class="font-serif text-orange-600">Desai Engineering</h2>
+          </a>
+          <nav class="hidden md:flex items-center space-x-6">
+            <a href="/" class="text-gray-700 hover:text-orange-600">Home</a>
+            <a href="/aboutUs.html" class="text-gray-700 hover:text-orange-600">About Us</a>
+            <a href="./business-areas.html" class="border-b-2 border-orange-600 text-orange-600 font-semibold">Business Areas</a>
+            <a href="./services.html" class="text-gray-700 hover:text-orange-600">Services</a>
+            <a href="/faq.html" class="text-gray-700 hover:text-orange-600">FAQ's</a>
+            <a href="tel:+918888011628" class="text-gray-700 hover:text-orange-600">Contact</a>
+            <a href="https://www.google.com/maps/dir/18.6679296,73.7378304/Natraj+Enterprises-Caster+Wheel+%2F+Trolley+Wheel+%2F+Forklift+%2F+Hydraulic+Stacker+Manufacturer+in+Bhosari%2FChakan%2FPune,+S+Block,+MIDC,+Bhosari,+Pimpri-Chinchwad,+Maharashtra/@18.6519258,73.7680673,8618m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bc2b80c06fae0f1:0x30f6ddc0f3ce1e52!2m2!1d73.8364308!2d18.6364352?entry=ttu&g_ep=EgoyMDI1MDcyMi4wIKXMDSoASAFQAw%3D%3D" class="text-gray-700 hover:text-orange-600">Locate us</a>
+          </nav>
+          <div class="md:hidden">
+            <button @click="open = !open" class="text-gray-700 focus:outline-none">
+              <svg x-cloak x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <svg x-cloak x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+      <div x-show="open" x-transition class="md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
+        <a href="/" class="block text-gray-700">Home</a>
+        <a href="aboutUs.html" class="block text-gray-700">About Us</a>
+        <a href="/business-areas.html" class="block text-orange-600 font-semibold">Business Areas</a>
+        <a href="/services.html" class="block text-gray-700">Services</a>
+        <a href="/faq.html" class="block text-gray-700">FAQ's</a>
+        <a href="tel:+918888011628" class="text-gray-700 block hover:text-orange-600">Contact</a>
+         <a href="https://www.google.com/maps/dir/18.6679296,73.7378304/Natraj+Enterprises-Caster+Wheel+%2F+Trolley+Wheel+%2F+Forklift+%2F+Hydraulic+Stacker+Manufacturer+in+Bhosari%2FChakan%2FPune,+S+Block,+MIDC,+Bhosari,+Pimpri-Chinchwad,+Maharashtra/@18.6519258,73.7680673,8618m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bc2b80c06fae0f1:0x30f6ddc0f3ce1e52!2m2!1d73.8364308!2d18.6364352?entry=ttu&g_ep=EgoyMDI1MDcyMi4wIKXMDSoASAFQAw%3D%3D" class="text-gray-700 block hover:text-orange-600">Locate us</a>
+        </div>
+    </header>
 
-    <!-- Mobile Menu Links -->
-    <div x-show="open"
-      x-transition:enter="transition ease-out duration-300"
-      x-transition:enter-start="opacity-0 -translate-y-4"
-      x-transition:enter-end="opacity-100 translate-y-0"
-      x-transition:leave="transition ease-in duration-200"
-      x-transition:leave-start="opacity-100 translate-y-0"
-      x-transition:leave-end="opacity-0 -translate-y-4"
-      class="md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
-      <a href="#" class="block text-orange-600 font-semibold">Home</a>
-      <a href="#" class="block text-gray-700">About Us</a>
-      <a href="#" class="block text-gray-700">Business Areas</a>
-      <a href="#" class="block text-gray-700">Services</a>
-      <a href="#" class="block text-gray-700">Infrastructure</a>
-      <a href="#" class="block text-gray-700">Why Desai</a>
-      <a href="#" class="block text-gray-700">Events</a>
-      <a href="#" class="block text-gray-700">More</a>
-    </div>
-  </header>
   <!-- Hero Section -->
   <section class="bg-[#0c2752] text-white py-24 text-center" data-aos="fade-down">
     <div class="max-w-5xl mx-auto px-4">
@@ -96,7 +78,7 @@
 
   <!-- Business Areas Grid -->
   <section class="py-20 bg-[#f9f9f9]">
-    <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-6xl mx-auto px-6" data-aos="fade-up">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
 
         <!-- Fabrication -->
@@ -145,6 +127,23 @@
     </div>
   </section>
 
+  <section class="py-16 bg-white" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+   <p class="text-3xl font-bold text-[#0c2752] mb-5" data-aos="fade-up">Explore Our Diverse Business Areas
+      Desai Engineering operates across critical sectors, offering high-performance solutions tailored to diverse mechanical, structural, and industrial needs.
+    </p>
+    <!-- <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-3 text-left text-lg font-medium" data-aos="fade-up" data-aos-delay="200">
+      <div>🔩 <strong>Custom Sheet Metal Fabrication</strong><br>Precision-crafted enclosures, brackets, panels, and structural components.</div>
+      <div>🏗️ <strong>Heavy-Duty Fabrication</strong><br>Support frames, skids, and load-bearing assemblies for infrastructure and capital equipment.</div>
+      <div>🚛 <strong>Transport & Logistics Components</strong><br>Trailer parts, chassis reinforcements, and modular support systems.</div>
+      <div>⚙️ <strong>OEM Engineering Support</strong><br>Sub-assemblies and fabrications tailored to global OEM standards.</div>
+      <div>🔌 <strong>Electrical & Control Cabinets</strong><br>Laser-cut, powder-coated boxes, housings, and panels for electrical OEMs.</div>
+      <div>🛡️ <strong>Defense & Strategic Supplies</strong><br>Robust enclosures and custom parts supporting mission-critical applications.</div>
+    </div> -->
+  </div>
+</section>
+
+
   <section class="py-16 bg-gray-100" data-aos="fade-up">
   <div class="max-w-6xl mx-auto px-4 text-center">
     <h2 class="text-3xl font-bold text-[#0c2752] mb-6">Our Capabilities</h2>
@@ -170,33 +169,10 @@
 </section>
 
 
-<section class="py-16 bg-white" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold text-[#0c2752] mb-6">Industries We Serve</h2>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-      <div>
-        <img src="https://img.icons8.com/ios-filled/50/0c2752/car.png" class="mx-auto mb-3" />
-        <h4 class="text-[#0c2752] font-semibold">Automotive</h4>
-      </div>
-      <div>
-        <img src="https://img.icons8.com/ios-filled/50/0c2752/engineering.png" class="mx-auto mb-3" />
-        <h4 class="text-[#0c2752] font-semibold">Heavy Engineering</h4>
-      </div>
-      <div>
-        <img src="https://img.icons8.com/ios-filled/50/0c2752/wind-turbine.png" class="mx-auto mb-3" />
-        <h4 class="text-[#0c2752] font-semibold">Renewable Energy</h4>
-      </div>
-      <div>
-        <img src="https://img.icons8.com/ios-filled/50/0c2752/health-book.png" class="mx-auto mb-3" />
-        <h4 class="text-[#0c2752] font-semibold">Medical & Pharma</h4>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="py-16 bg-[#f9f9f9]" data-aos="fade-up">
   <div class="max-w-4xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold text-[#0c2752] mb-4">Located in the Heart of Industrial Pune</h2>
+    <h2 class="text-3xl font-bold text-[#0c2752] mb-4" data-aos="fade-right" data-aos-duration="500">Located in the Heart of Industrial Pune</h2>
     <p class="text-gray-700 text-lg mb-6">Desai Engineering operates from Bhosari MIDC — the manufacturing hub of Maharashtra.</p>
    <div class="rounded-xl shadow-lg overflow-hidden">
       <iframe
