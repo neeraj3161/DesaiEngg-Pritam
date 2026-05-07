@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Desai Engineering</title>
 
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script defer
@@ -26,26 +27,15 @@
 
           <!-- Logo -->
           <a href="./"
-            class="flex justify-center space-x-4 items-center flex-shrink-0"
+            class="flex justify-center space-x-2 items-center flex-shrink-0"
             data-aos="flip-down" data-aos-duration="1000">
             <!-- SVG LOGO -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-              width="48" height="48">
-              <g transform="translate(256,256)">
-                <circle r="160" fill="none" stroke="#EF6C00" stroke-width="40"
-                  stroke-dasharray="440 100" transform="rotate(-25)" />
-                <g transform="rotate(-25)">
-                  <rect x="-60" y="-50" width="120" height="20" rx="4"
-                    fill="black" />
-                  <rect x="-60" y="-10" width="100" height="20" rx="4"
-                    fill="black" />
-                  <rect x="-60" y="30" width="80" height="20" rx="4"
-                    fill="black" />
-                </g>
-              </g>
-            </svg>
+            <image src="/assets/logo.png"
+              width="40" height="40" alt="Desai Engineering Logo">
+              
+            </image>
 
-            <h2 class="text-center font-serif text-orange-600">Desai
+            <h2 class="text-center font-serif text-black-600">Desai
               Engineering</h2>
 
           </a>
@@ -127,7 +117,7 @@
 
       <div class="relative z-10 text-left px-6">
         <h2
-          class="text-xl md:text-3xl text-orange-600 font-light font-serif mb-2"
+          class="text-xl md:text-3xl text-white-200 font-light font-serif mb-2"
           data-aos="fade-right" data-aos-duration="1500">Beyond metal- with Engineering Systems, subsystems, modules and components
 </h2>
         <h1
@@ -459,23 +449,29 @@
           </div>
 
           <!-- Contact Form -->
-          <form class="bg-white p-6 rounded-lg shadow-md text-left">
+          <form method="post" action="http://localhost:3000/enquiry" id="contact-form" class="bg-white p-6 rounded-lg shadow-md text-left">
             <div class="mb-4">
               <label
                 class="block text-sm font-medium text-gray-700">Name</label>
-              <input type="text" placeholder="Your Name"
+              <input type="text" id="name" placeholder="Your Name"
                 class="w-full px-4 py-2 border rounded-md" />
             </div>
             <div class="mb-4">
               <label
                 class="block text-sm font-medium text-gray-700">Email</label>
-              <input type="email" placeholder="you@example.com"
+              <input type="email" id="email" placeholder="you@example.com"
+                class="w-full px-4 py-2 border rounded-md" />
+            </div>
+             <div class="mb-4">
+              <label
+                class="block text-sm font-medium text-gray-700">Phone</label>
+              <input type="tel" id="phone" placeholder="Your Phone Number"
                 class="w-full px-4 py-2 border rounded-md" />
             </div>
             <div class="mb-4">
               <label
                 class="block text-sm font-medium text-gray-700">Message</label>
-              <textarea rows="4" placeholder="Your message..."
+              <textarea rows="4" id="message" placeholder="Your message..."
                 class="w-full px-4 py-2 border rounded-md"></textarea>
             </div>
             <button type="submit"
@@ -521,6 +517,7 @@
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./main.js"> </script>
     <script>
     AOS.init({ duration: 1000, once: true });
   </script>
