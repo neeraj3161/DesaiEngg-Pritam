@@ -29,8 +29,6 @@ app.use(cors({
     credentials: true, // Allow cookies and credentials
 }));
 
-app.options('*', cors()); // Enable pre-flight requests for all routes
-
 
 
 //to parse json
