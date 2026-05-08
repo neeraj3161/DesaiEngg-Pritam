@@ -22,11 +22,11 @@ const transporter = nodemailer.createTransport({
 const app = express();
 
 
-// app.use(cors({
-//     origin: 'http://127.0.0.1:5501', // Replace with your frontend URL
-//     methods: ['GET', 'POST'], // Allowed HTTP methods
-//     allowedHeaders: ['Content-Type'], // Allowed headers
-// }));
+app.use(cors({
+    origin: 'https://www.desaiengineering.in/', // Replace with your frontend URL
+    methods: ['GET', 'POST'], // Allowed HTTP methods
+    allowedHeaders: ['Content-Type'], // Allowed headers
+}));
 
 
 
