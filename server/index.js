@@ -23,7 +23,7 @@ const app = express();
 
 
 app.use(cors({
-    origin: 'https://www.desaiengineering.in/', // Replace with your frontend URL
+    origin: 'https://www.desaiengineering.in', // Replace with your frontend URL
     methods: ['GET', 'POST'], // Allowed HTTP methods
     allowedHeaders: ['Content-Type'], // Allowed headers
     credentials: true, // Allow cookies and credentials
