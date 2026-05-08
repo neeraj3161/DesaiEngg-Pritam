@@ -26,7 +26,10 @@ app.use(cors({
     origin: 'https://www.desaiengineering.in/', // Replace with your frontend URL
     methods: ['GET', 'POST'], // Allowed HTTP methods
     allowedHeaders: ['Content-Type'], // Allowed headers
+    credentials: true, // Allow cookies and credentials
 }));
+
+app.options('*', cors()); // Enable pre-flight requests for all routes
 
 
 
